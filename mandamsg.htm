@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>Messaggi porcapaletta_2000</title>
+</head>
+<body bgcolor="ffffcc" text="0000cc">
+<script language="JavaScript">
+<!-- 
+var bkup ='';
+var flag =0;
+function checkSubmit(obj1)
+{
+//alert(obj1.elements[4].name);
+ if (obj1.elements[2].value.length==0){
+  alert('Inserisci il tuo NOME !');
+  obj1.elements[2].focus();
+  return false;
+ }
+ if (obj1.elements[4].value.length==0){
+  alert('Inserisci il MESSAGGIO !');
+  obj1.elements[3].focus();
+  return false;
+ }
+ if (flag==0)
+ {
+  today = new Date();
+  dataora = '[ ';
+  if (today.getDate()<10) dataora=dataora+'0';
+  dataora=dataora+today.getDate()+'/';
+  if ((today.getMonth()+1)<10) dataora=dataora+'0'; 
+  dataora=dataora+(today.getMonth()+1)+'/'+today.getYear()+' - ';
+  if (today.getHours()<10) dataora=dataora+'0';
+  dataora=dataora+today.getHours()+':';
+  if (today.getMinutes()<10) dataora=dataora+'0';
+  dataora=dataora+today.getMinutes()+' ]';
+  //+':'+today.getSeconds();
+  //  alert(dataora);
+  var appo='';
+  appo=obj1.elements[2].value=obj1.elements[2].value;
+  obj1.elements[2].value=dataora+'&nbsp;&nbsp;&nbsp;&nbsp;'+appo; 
+  //obj1.action="http://it.geocities.yahoo.com/gb/sign"
+  flag=1;
+  return true;
+ } 
+}
+// -->
+</script>
+<center>
+<table cellpadding=3 cellspacing=0 border=0>
+<tr><td align=center>
+<form name=form1 method=post action="http://it.geocities.yahoo.com/gb/sign" onSubmit="javascript:return checkSubmit(this);">
+<input type=hidden name=".state" value=1>
+<input type=hidden name="member" value="porcapaletta_2000">
+<table cellspacing=0 cellpadding=2 border=0>
+<tr><td>
+<font face=arial color="#990000"><br><br><br><b>
+<span style="font-size:18">
+Lascia un Messaggio
+</span>
+</b><br><br>
+</font>
+</td></tr>
+<tr><td>
+<font face=arial color="#0000cc">
+Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=text name="1" value="" SIZE=45 maxlength=60 tabindex=1>
+</font>
+<br><br>
+</td></tr>
+<tr><td> 
+<font face=arial color="#0000cc">
+Messaggio:</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face=arial size=-2 color="#0000cc">( caratteri disponibili <input type=text name="nchar" value="255" SIZE=1 maxlength=3 tabindex=6 onFocus="javascript:this.blur();"> )</font>
+<BR>
+<font face=arial color="#0000cc">
+<textarea wrap=virtual rows=6 cols=45 name=2 maxlength=255 tabindex=2
+onbeforepaste="javascript:bkup=this.value;" 
+onkeypress="javascript:bkup=this.value;"
+onpropertychange="javascript:if (this.value.length>255)this.value=bkup;nchar.value=255-this.value.length;">
+</textarea>
+</font>
+<BR>
+</td></tr>
+<tr><td>
+<font face=arial color="#0000cc">
+<input type=hidden tabindex=7 name=".referer" value="http://it.geocities.yahoo.com/gb/view?member=porcapaletta_2000">
+<!--input type=hidden tabindex=3 name=".referer" value="http://it.geocities.com/porcapaletta_2000/"-->
+<input type=submit tabindex=3 value="  Invia  ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=reset tabindex=4 value="Svuota" onclick="javascript:flag=0;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" tabindex=5 value="Indietro" onClick="javascript:history.back();">
+</font>
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>
